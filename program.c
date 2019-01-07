@@ -11,7 +11,8 @@ int main()
 	int loop = 0;
 	float celsius;
 	float fahrenheit;
-	float meter;
+	float metre;
+	float centimetres;
 	float inches;
 	float feet;
 
@@ -20,10 +21,10 @@ int main()
 		printf("Which units would you like to convert? \n");
 		printf("1. celsius to Fahrenheit \n");
 		printf("2. Fahrenheit to celsius \n");
-		printf("3. Meters to inches \n");
-		printf("4. Inches to feet to \n");
-		printf("5. Feet to meters \n");
-		printf("6. Inches to centimeters \n");
+		printf("3. metres to inches \n");
+		printf("4. Inches to feet \n");
+		printf("5. Feet to metres \n");
+		printf("6. Inches to centimetres \n");
 		printf("7. End program");
 		scanf("%d", &menu);
 
@@ -34,21 +35,58 @@ int main()
 			scanf("%f", &celsius);
 			fahrenheit = (celsius * 1.8) + 32;
 			printf("the degree in fahrentheit is: %f ", fahrenheit);
-
-
 		}
 
 		if (menu == 2)
 		{
-			printf("Fahrenheit to Celcius converter");
-			printf("enter a temperature in fahrenheit \n");
+			printf("Fahrenheit to Celcius converter \n");
+			printf("Enter a temperature in fahrenheit \n");
 			scanf("%f", &fahrenheit);
 			celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
 			printf("the degree in celsius is: %f", celsius);
 		}
+		
+		if (menu == 3)
+		{
+			printf("Metres to inches converter \n");
+			printf("Enter the metre value: \n");
+			scanf("%f", &metre);
+			inches = metre * 39.37;
+			printf("The value is %f inches", &inches);
+		}
 
+		if (menu == 4)
+		{
+			printf("Inches to feet converter \n");
+			printf("Enter the inches Value: \n");
+			scanf("%f", &inches);
+			feet = inches / 12;
+			printf("the value is: %f feet", feet);
+		}
 
+		if (menu == 5)
+		{
+			printf("Feet to metre converter \n");
+			printf("Enter the feet value: \n");
+			scanf("%f", &feet);
+			metre = feet / 3.281;
+			printf("The value is %f metres", metre);
+		}
 
+		if (menu == 6)
+		{
+			printf("Inches to Centimetres converter: \n");
+			printf("Enter the inches value: \n");
+			scanf("%d", &inches);
+			centimetres = inches * 2.54;
+			printf("the value is %f centimetres.", centimetres);
+		}
+		if (menu == 7)
+		{
+			printf("The program is now closing");
+			loop = 1;
+
+		}
 	}
 
 
