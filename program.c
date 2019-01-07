@@ -44,7 +44,7 @@ int main()
 			printf("Enter a temperature in fahrenheit \n");
 			scanf("%f", &fahrenheit);
 			celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
-			printf("the degree in celsius is: %f", celsius);
+			printf("the degree in celsius is: %f \n \n", celsius);
 		}
 		
 		if (menu == 3)
@@ -53,7 +53,7 @@ int main()
 			printf("Enter the metre value: \n");
 			scanf("%f", &metre);
 			inches = metre * 39.37;
-			printf("The value is %f inches", &inches);
+			printf("The value is %f inches \n \n", &inches);
 		}
 
 		if (menu == 4)
@@ -62,7 +62,7 @@ int main()
 			printf("Enter the inches Value: \n");
 			scanf("%f", &inches);
 			feet = inches / 12;
-			printf("the value is: %f feet", feet);
+			printf("the value is: %f feet \n \n", feet);
 		}
 
 		if (menu == 5)
@@ -71,7 +71,7 @@ int main()
 			printf("Enter the feet value: \n");
 			scanf("%f", &feet);
 			metre = feet / 3.281;
-			printf("The value is %f metres", metre);
+			printf("The value is %f metres \n \n", metre);
 		}
 
 		if (menu == 6)
@@ -80,7 +80,7 @@ int main()
 			printf("Enter the inches value: \n");
 			scanf("%d", &inches);
 			centimetres = inches * 2.54;
-			printf("the value is %f centimetres.", centimetres);
+			printf("the value is %f centimetres. \n \n", centimetres);
 		}
 		if (menu == 7)
 		{
