@@ -35,7 +35,7 @@ int main()
 			scanf("%f", &celsius);
 			fahrenheit = (celsius * 1.8) + 32;
 			printf("the degree in fahrentheit is: %f \n \n", fahrenheit);
-            getchar();
+            
             }
 
 		if (menu == 2)
@@ -88,6 +88,7 @@ int main()
 			loop = 1;
 
 		}
+		getchar();
 	}
 
 
