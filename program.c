@@ -18,28 +18,29 @@ int main()
 
 	while (loop == 0)
 	{
-		printf("Which units would you like to convert? \n");
+		printf("Which units would you like to convert? \n \n");
 		printf("1. celsius to Fahrenheit \n");
 		printf("2. Fahrenheit to celsius \n");
 		printf("3. metres to inches \n");
 		printf("4. Inches to feet \n");
 		printf("5. Feet to metres \n");
 		printf("6. Inches to centimetres \n");
-		printf("7. End program");
+		printf("7. End program \n");
 		scanf("%d", &menu);
 
 		if (menu == 1)
 		{
-			printf("celsius to Fahrenheit Converter \n ");
+			printf("Celsius to Fahrenheit Converter\n ");
 			printf("Enter the celsius value: \n");
 			scanf("%f", &celsius);
 			fahrenheit = (celsius * 1.8) + 32;
-			printf("the degree in fahrentheit is: %f ", fahrenheit);
-		}
+			printf("the degree in fahrentheit is: %f \n \n", fahrenheit);
+            getchar();
+            }
 
 		if (menu == 2)
 		{
-			printf("Fahrenheit to Celcius converter \n");
+			printf("Fahrenheit to Celcius converter\n");
 			printf("Enter a temperature in fahrenheit \n");
 			scanf("%f", &fahrenheit);
 			celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
