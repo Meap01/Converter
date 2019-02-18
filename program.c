@@ -5,6 +5,17 @@ Program by Daniel Krasovski.
 #include <stdio.h>
 #include <stdlib.h>
 
+float menu1(float);
+float menu2(float);
+float menu3(float);
+float menu4(float);
+float menu5(float);
+float menu6(float);
+float menu7(float);
+float menu8(float);
+
+
+
 int main()
 {
 	int menu;
@@ -30,12 +41,9 @@ int main()
 
 		if (menu == 1)
 		{
-			printf("Celsius to Fahrenheit Converter\n ");
-			printf("Enter the celsius value: \n");
-			scanf("%f", &celsius);
-			fahrenheit = (celsius * 1.8) + 32;
+
 			printf("the degree in fahrentheit is: %f \n \n", fahrenheit);
-            
+            getchar();
             }
 
 		if (menu == 2)
@@ -44,7 +52,7 @@ int main()
 			printf("Enter a temperature in fahrenheit \n");
 			scanf("%f", &fahrenheit);
 			celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
-			printf("the degree in celsius is: %f \n \n", celsius);
+			printf("the degree in celsius is: %f", celsius);
 		}
 		
 		if (menu == 3)
@@ -53,7 +61,7 @@ int main()
 			printf("Enter the metre value: \n");
 			scanf("%f", &metre);
 			inches = metre * 39.37;
-			printf("The value is %f inches \n \n", &inches);
+			printf("The value is %f inches", &inches);
 		}
 
 		if (menu == 4)
@@ -62,7 +70,7 @@ int main()
 			printf("Enter the inches Value: \n");
 			scanf("%f", &inches);
 			feet = inches / 12;
-			printf("the value is: %f feet \n \n", feet);
+			printf("the value is: %f feet", feet);
 		}
 
 		if (menu == 5)
@@ -71,7 +79,7 @@ int main()
 			printf("Enter the feet value: \n");
 			scanf("%f", &feet);
 			metre = feet / 3.281;
-			printf("The value is %f metres \n \n", metre);
+			printf("The value is %f metres", metre);
 		}
 
 		if (menu == 6)
@@ -80,7 +88,7 @@ int main()
 			printf("Enter the inches value: \n");
 			scanf("%d", &inches);
 			centimetres = inches * 2.54;
-			printf("the value is %f centimetres. \n \n", centimetres);
+			printf("the value is %f centimetres.", centimetres);
 		}
 		if (menu == 7)
 		{
@@ -88,8 +96,15 @@ int main()
 			loop = 1;
 
 		}
-		getchar();
 	}
 
 
+}
+
+float menu1(float fahrenheit)
+{
+	printf("Celsius to Fahrenheit Converter\n ");
+	printf("Enter the celsius value: \n");
+	scanf("%f", &celsius);
+	fahrenheit = (celsius * 1.8) + 32;
 }
