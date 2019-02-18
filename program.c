@@ -14,18 +14,20 @@ float menu6(float);
 float menu7(float);
 float menu8(float);
 
+float fahrenheit;
+float celsius;
+float metre;
+float centimetres;
+float inches;
+float feet;
+float ans;
 
 
 int main()
 {
 	int menu;
 	int loop = 0;
-	float celsius;
-	float fahrenheit;
-	float metre;
-	float centimetres;
-	float inches;
-	float feet;
+
 
 	while (loop == 0)
 	{
@@ -41,36 +43,26 @@ int main()
 
 		if (menu == 1)
 		{
-
-			printf("the degree in fahrentheit is: %f \n \n", fahrenheit);
-            getchar();
-            }
+			ans = menu1(fahrenheit);
+			printf("the degree in fahrenheit is: %f \n \n", ans);
+        }
 
 		if (menu == 2)
 		{
-			printf("Fahrenheit to Celcius converter\n");
-			printf("Enter a temperature in fahrenheit \n");
-			scanf("%f", &fahrenheit);
-			celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
-			printf("the degree in celsius is: %f", celsius);
+            ans = menu2(celsius);
+			printf("the degree in celsius is: %f", ans);
 		}
 		
 		if (menu == 3)
 		{
-			printf("Metres to inches converter \n");
-			printf("Enter the metre value: \n");
-			scanf("%f", &metre);
-			inches = metre * 39.37;
-			printf("The value is %f inches", &inches);
+            ans = menu3(inches);
+			printf("The value is %f inches", ans);
 		}
 
 		if (menu == 4)
 		{
-			printf("Inches to feet converter \n");
-			printf("Enter the inches Value: \n");
-			scanf("%f", &inches);
-			feet = inches / 12;
-			printf("the value is: %f feet", feet);
+            ans = menu4(feet);
+			printf("the value is: %f feet", ans);
 		}
 
 		if (menu == 5)
@@ -97,8 +89,6 @@ int main()
 
 		}
 	}
-
-
 }
 
 float menu1(float fahrenheit)
@@ -107,4 +97,33 @@ float menu1(float fahrenheit)
 	printf("Enter the celsius value: \n");
 	scanf("%f", &celsius);
 	fahrenheit = (celsius * 1.8) + 32;
+	return fahrenheit;
+}
+
+float menu2(float celsius)
+{
+	printf("Fahrenheit to Celcius converter\n");
+	printf("Enter a temperature in fahrenheit \n");
+	scanf("%f", &fahrenheit);
+	celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
+	return celsius;
+
+}
+
+float menu3(float inches)
+{
+	printf("Metres to inches converter \n");
+	printf("Enter the metre value: \n");
+	scanf("%f", &metre);
+	inches = metre * 39.37;
+	return inches;
+}
+
+float menu4(float feet)
+{
+	printf("Inches to feet converter \n");
+	printf("Enter the inches Value: \n");
+	scanf("%f", &inches);
+	feet = inches / 12;   
+	return feet;
 }
